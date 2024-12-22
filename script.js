@@ -6,6 +6,7 @@
 
 
 // ================ Example - 1  ==============
+
 function chakeNumber (num) {
 if(num > 0)
     return "positive"
@@ -23,42 +24,52 @@ console.log(chakeNumber(10));
 
 // ================ Example - 2  ==============
 
-function leepYear (year){
+function leapYear  (year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return `${year} is a Leap Year......`;
+    } else {
+        return `${year} is not a Leap Year......`;
+    }
+};
+
+console.log(leapYear(2024)); // Output: '2024 is a Leap Year......'
+console.log(leapYear(2025)); // Output: '2025 is not a Leap Year......'
+
+
+
+function isLeapYear  (year)  {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return `${year} is a Leap Year......`;
+    } else {
+        return `${year} is not a Leap Year......`;
+    }
+};
+
+console.log(isLeapYear(2024)); // Output: '2024 is a Leap Year......'
+console.log(isLeapYear(2025)); // Output: '2025 is not a Leap Year......'
+
+//   AKS - Traner 
+
+const leepYear1 =  (year) =>{
     if((year % 4 === 0 && year % 100 !==0 )||
 year % 400 === 0
 ){
     return " Leep Year...... "
-}
-
-else {
+}else {
     return " Is Not A Leep Year"
 }
 }
 
-console.log( leepYear(2024) );
-
-  AKS - Traner 
-function leepYear (year){
-    if((year % 4 === 0 && year % 100 !==0 )||
-year % 400 === 0
-){
-    return " Leep Year...... "
-}
-
-else {
-    return " Is Not A Leep Year"
-}
-}
-
-console.log( leepYear(2024) );
+console.log( leepYear1(2024) );
+console.log( leepYear1(1994) );
 
 
 // ================ Example - 3  ==============
- let  multupul = (a , b) =>{
+
+ function  multupul(a , b){
 if (a*b >= 100){
     return "Product is 100 more than"
-}
-else{
+}else{
     return "Product is Less......... than 100"
 }
  } 
@@ -72,7 +83,7 @@ else{
 
 // 👉 0-12 = " Child"  - 12-19 = "Theen"  -  20👆 = "Adul" 
 
-const DeterMineAgeGroup = (age) =>{
+function DeterMineAgeGroup  (age) {
     if(age >= 0  && age <=12 ){
  return "Child"
     }
@@ -96,41 +107,171 @@ console.log(DeterMineAgeGroup(22));
 
 
 // ================ Example - 5  =============
+
 const startWithWord =  (str,word) =>{
 if(str.startsWith(word)){
     return `starts With ${word}`
 }
 else{
-    return `Does not with ${word}`
+        return `Does not with ${word}`
+    }
+    }
+    
+    console.log(startWithWord("Hello World" , "Hello"))  // Output:  "starts With Hello"
+    console.log(startWithWord("Python is Great" , "Java"))  // Output:  " Does not with Java" 
+    console.log(startWithWord("Java script is Fan" , "Java"))  // Output:  "starts With Java"
+     
+    // ================ Example - 6  ==============
+
+    function findSmaller(a, b) {
+        if (a < b) {
+            return a;
+        } else if (b < a ) {
+            return b;
+        } else {
+            return"Both are equal";
+        }
+    }
+    
+    console.log(findSmaller(10, 20)); // Output: 10
+    console.log(findSmaller(20, 20)); // Output:"Both are equal"
+    console.log(findSmaller(100, 400)); // Output: 100
+    
+    // ================ Example - 7  ==============
+
+function  divisibleByThreeAndSeven(num){
+    if (num % 3 === 0 && num % 7 === 0) {
+        return `${num} -> is a divisible by  both  3 and 7`
+    }
+     else {
+        return   `${num} -> is not divisible by  both  3 and 7`
+     }
 }
+
+ console.log(divisibleByThreeAndSeven(21)); // Output: "21 is divisible by both 3 and 7" 
+ console.log(divisibleByThreeAndSeven(10)); // Output: "10 is not divisible by both"
+
+    // ================ Example - 8  ==============
+
+   function findMax(a,b,c){
+     if (a >= b &&  a >= c) {
+         return `${a} is the maximum number`
+     }
+
+   else if ( b >= a && b >= c ){
+           return `${b} is the maximum number`
+   }
+   else {
+          return `${c} is the maximum number`
+   }
+   }
+
+   console.log(findMax(10,5,70))  // Output: "70 is the maximum number"
+   console.log(findMax(10,47,5))  // Output: "47 is the maximum number"
+   console.log(findMax(478,15,27))  // Output: "478 is the maximum number"
+    
+    // ================ Example - 9  ==============
+
+    function getSeason(month) {
+        if (month === "December" || month ===  "January" ||  month ===  "February") {
+            return  "Winter"
+        }
+
+        else if(month === "March" || month ===   "April" || month ===  "May" ){
+            return  "Spring"
+        }
+        else if(month === "June" || month ===   "July " || month ===  "August" ){
+            return  "Summer"
+        }
+        else{
+            return  "Fail"
+        }
+    }
+
+    console.log(getSeason("June"));  // Output: "Summer"
+    console.log(getSeason("March"));  // Output: "Spring"
+    console.log(getSeason("February"));  // Output: "Winter"
+    
+
+    // ================ Example - 10  ==============
+    
+    function checkEligility(age){
+        if (age >= 18) {
+            return "Eligility to vote"
+        }
+
+        else{
+              return "Not eligility to vote"
+        }
+    }
+    console.log(checkEligility(18));  // Output: "Eligility to vote"
+    console.log(checkEligility(14)); // Output: "Not eligility to vote"
+    
+    // ================ Example - 11  ==============
+    function chechRange(num) {
+        if(num >= 0 &&  num <= 100){
+      return  " In range"
+        }
+
+        else{
+            return "Out of  range"
+        }
+    }
+    console.log(chechRange(100)); // Output: "In range"
+    console.log(chechRange(400)); // Output: "Out of  range"
+    
+    // ================ Example - 12  ==============
+
+function isEvenOdd(num) {
+    if (num % 2 ===0) {
+        return `${num} Is Even Number `
+    } else {
+         return `${num} Is Odd Number `
+    }
 }
 
-console.log(startWithWord("Hello World" , "Hello")) 
-console.log(startWithWord("Java script is Fan" , "Java"))
-console.log(startWithWord("Python is Great" , "Java"))
-// ================ Example - 6  ==============
-// ================ Example - 7  ==============
-// ================ Example - 8  ==============
-// ================ Example - 9  ==============
-// ================ Example - 10  ==============
-// ================ Example - 11  ==============
-// ================ Example - 12  ==============
-// ================ Example - 13  ==============
-// ================ Example - 14  ==============
-// ================ Example - 15  ==============
-// ================ Example - 16  ==============
+console.log(isEvenOdd(10));  // Output: "10 Is Even Number "
+console.log(isEvenOdd(15));  // Output: "15 Is Even Number" 
 
 
-
-
-//  Example - of ==  Conditional (Ternary) Operator 👇👇👇👇  ===========
-
-
-// ================ Example - 1  ==============
- const calculateDiscount = (price) => {
-   return  price > 1000 
+    // ================ Example - 13  ==============
+    // ================ Example - 14  ==============
+    // ================ Example - 15  ==============
+    // ================ Example - 16  ==============
+    
+    
+    
+    
+    //  Example - of ==  Conditional (Ternary) Operator 👇👇👇👇  ===========
+    
+    
+    // ================ Example - 1  ==============
+  
+    const calculateDiscount = (price) => {
+        return  price > 1000 
     ?`10 % Discount${price*0.9}` 
     : `5 % Discount${price*0.95}`;
  }
+ 
+ console.log(calculateDiscount(1200))   // Output: "10% Discount: 1080"
+ console.log(calculateDiscount(200))     // Output: "5% Discount: 190"
+ 
+  // ================ Example - 2  ==============
+  
+  // ================ Example - 1  ==============
+  // ================ Example - 1  ==============
+  // ================ Example - 1  ==============
+ /**
+  * =============================
+  * ES6 Features:
+  * =============================
+  * This section demonstrates:
+  * - Arrow functions
+  * - Template literals
+  * - Destructuring
+  * - etc.
+  */
 
-console.log(calculateDiscount(1200))
+ // =========================================
+// Section: ES6 Features Implementation
+// =========================================
